@@ -18,5 +18,9 @@
   "bugs": {
     "url": "https://github.com/JordanPak/MusicDistro-React/issues"
   },
-  "homepage": "https://github.com/JordanPak/MusicDistro-React#readme"
+  "homepage": "https://github.com/JordanPak/MusicDistro-React#readme",
+  "dependencies": {
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1"
+  }
 }
