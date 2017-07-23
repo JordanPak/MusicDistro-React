@@ -1,0 +1,22 @@
+{
+  "name": "musicdistro-react",
+  "version": "0.1.0",
+  "description": "A non-WP version of MusicDistro built on React",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JordanPak/MusicDistro-React.git"
+  },
+  "keywords": [
+    "musicdistro"
+  ],
+  "author": "Jordan Pakrosnis <jpak@jordanpak.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JordanPak/MusicDistro-React/issues"
+  },
+  "homepage": "https://github.com/JordanPak/MusicDistro-React#readme"
+}
