@@ -1,3 +1,14 @@
 /**
  * MusicDistro | Mixins
  */
+
+@mixin overlay( $z-index: 0 ) {
+	content: '';
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: $z-index;
+}

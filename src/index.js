@@ -10,7 +10,11 @@ import Form from './components/Form';
 
 // assets
 // import logo from './images/logo.svg';
+import 'typeface-oswald';
+import 'typeface-open-sans';
+import 'font-awesome/css/font-awesome.css';
 import './css/App.css';
+
 
 
 const App = () => (

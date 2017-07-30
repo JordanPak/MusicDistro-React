@@ -2,5 +2,29 @@
  * MusicDistro | MAIN STYLES
  */
 
+* {
+	box-sizing: border-box;
+}
+
+html {
+	position: relative;
+	height: 100%;
+	
+	&:before {
+		@include overlay();
+		background: rgba( $blue, 0.8 );
+	}
+}
+
 body {
+	position: relative;
+	background: url('../images/mountain.jpg') no-repeat top $blue;
+	background-size: cover;
+	color: $white;
+}
+
+
+main {
+	margin: 0 auto;
+	max-width: 1200px;
 }

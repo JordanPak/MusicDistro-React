@@ -401,6 +401,37 @@ template {
 /**
  * MusicDistro | TYPOGRAPHY
  */
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  font-family: "Oswald", sans-serif;
+  font-weight: 400; }
+
 /**
  * MusicDistro | MAIN STYLES
  */
+* {
+  box-sizing: border-box; }
+
+html {
+  position: relative;
+  height: 100%; }
+  html:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+    background: rgba(56, 95, 203, 0.8); }
+
+body {
+  position: relative;
+  background: url("../images/mountain.jpg") no-repeat top #385fcb;
+  background-size: cover;
+  color: #ffffff; }
+
+main {
+  margin: 0 auto;
+  max-width: 1200px; }
