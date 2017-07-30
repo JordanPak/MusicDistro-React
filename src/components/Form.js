@@ -5,7 +5,7 @@ class Form extends Component {
 
 	render() {
 		return (
-			<h1>Look at this chicken</h1>
+			<h1>Uhuh</h1>
 		);
 	}
 }
