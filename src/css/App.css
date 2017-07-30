@@ -399,8 +399,74 @@ template {
  * MusicDistro | VARIABLES
  */
 /**
+ * Music Distro | BUTTON
+ */
+button, [role="button"], [type="submit"] {
+  display: inline-block;
+  padding: 10px 22px;
+  background: #00d661;
+  color: #ffffff;
+  border: none;
+  outline: none;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: 1.5px;
+  border-radius: 6px;
+  box-shadow: 0 2px 24px rgba(56, 95, 203, 0.5);
+  border-bottom: 1px solid #00ef6c;
+  transition: all ease-in-out 200ms;
+  cursor: pointer; }
+  button:hover, [role="button"]:hover, [type="submit"]:hover {
+    background: #00ef6c; }
+
+/**
+ * MusicDistro | FORM
+ */
+form {
+  display: inline-flex;
+  flex-flow: row wrap;
+  padding: 25px;
+  max-width: 350px;
+  font-size: 0;
+  background: #2c4ea7;
+  box-shadow: 0 1px 28px rgba(47, 96, 224, 0.5);
+  border-radius: 6px; }
+
+label, input, select, textarea {
+  display: inline-block; }
+
+label {
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 14px;
+  font-weight: 700;
+  width: 100%; }
+
+input, select, textarea {
+  vertical-align: text-top;
+  margin-right: 6px;
+  font-size: 16px;
+  padding: 10px;
+  border: none;
+  border-radius: 6px; }
+  input [type="submit"], select [type="submit"], textarea [type="submit"] {
+    flex: 0 1 auto; }
+  input:last-child, select:last-child, textarea:last-child {
+    margin-right: 0; }
+
+select {
+  flex: 1 0 auto; }
+
+/**
  * MusicDistro | TYPOGRAPHY
  */
+body {
+  font-size: 16px;
+  color: #ffffff;
+  font-family: "Open Sans", sans-serif; }
+
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
   font-family: "Oswald", sans-serif;
@@ -429,9 +495,8 @@ html {
 body {
   position: relative;
   background: url("../images/mountain.jpg") no-repeat top #385fcb;
-  background-size: cover;
-  color: #ffffff; }
+  background-size: cover; }
 
 main {
-  margin: 0 auto;
-  max-width: 1200px; }
+  margin: 60px auto 0;
+  max-width: 800px; }
