@@ -12,7 +12,7 @@ html {
 	
 	&:before {
 		@include overlay();
-		background: rgba( $blue, 0.8 );
+		background: rgba( $blue, 0.9 );
 	}
 }
 
