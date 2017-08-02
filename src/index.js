@@ -41,7 +41,7 @@ class App extends Component {
 	// get the selected instrument's sheets
 	getSheets = () => {
 		this.setState({
-			sheets : 'Getting sheets for ' + this.state.instrument.label
+			sheets : 'Getting sheets for ' + this.state.instrument
 		});
 	}
 

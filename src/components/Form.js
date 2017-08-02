@@ -1,3 +1,4 @@
+// libs
 import React, { Component } from 'react';
 
 
@@ -5,33 +6,14 @@ import React, { Component } from 'react';
  * List of instruments
  */
 var instruments = [
-	{
-		key   : 'piccolo',
-		label : 'Piccolo'
-	},
-	{
-		key   : 'clarinet',
-		label : 'Clarinet'
-	},
-	{
-		key   : 'alto-sax',
-		label : 'Alto Sax'
-	},
-	{
-		key   : 'tenor-sax',
-		label : 'Tenor Sax'
-	},
-	{
-		key   : 'trumpet',
-		label : 'Trumpet'
-	},
-	{
-		key   : 'mellophone',
-		label : 'Mellophone'
-	}
+	'Piccolo', 'Clarinet', 'Alto Sax', 'Tenor Sax',
+	'Trumpet', 'Mellophone'
 ];
 
 
+/**
+ * Form class
+ */
 class Form extends Component {
 
 	// initialize the first instrument
@@ -43,13 +25,7 @@ class Form extends Component {
 
 	// update the instrument state on change
 	handleInstrumentChange = ( e ) => {
-
-		this.setState({ instrument : {
-			key   : e.target.value,
-			label : instruments.find( function( instrument ) {
-				return instrument.key === e.target.value
-			}).label
-		}});
+		this.setState({ instrument : e.target.value });
 	}
 
 
@@ -64,10 +40,10 @@ class Form extends Component {
 	render() {
 
 		// build options
-		var options = instruments.map( ( instrument ) => 
+		var options = instruments.map( ( instrument, index ) => 
 
-			<option key={ instrument.key } value={ instrument.key } >
-				{ instrument.label }
+			<option key={ index } value={ instrument } >
+				{ instrument }
 			</option>
 		);
 
