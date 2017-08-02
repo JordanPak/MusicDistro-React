@@ -470,8 +470,9 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
-  font-family: "Oswald", sans-serif;
-  font-weight: 400; }
+  font-weight: 700;
+  letter-spacing: -0.66px;
+  color: #404963; }
 
 /**
  * MusicDistro | MAIN STYLES
@@ -480,8 +481,7 @@ h1, h2, h3, h4, h5, h6 {
   box-sizing: border-box; }
 
 html {
-  position: relative;
-  height: 100%; }
+  position: relative; }
   html:before {
     content: '';
     display: block;
@@ -495,10 +495,18 @@ html {
 
 body {
   position: relative;
-  background: url("../images/mountain.jpg") no-repeat top #2f5cda;
-  background-size: cover; }
+  background: #f7f7f7; }
+
+main {
+  background: #f7f7f7; }
 
 .wrap {
   margin: 0 auto;
   width: 90%;
   max-width: 800px; }
+
+/**
+ * Music Distro | SHEETS
+ */
+.sheets {
+  padding: 50px 0; }

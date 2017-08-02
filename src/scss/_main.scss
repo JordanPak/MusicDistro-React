@@ -8,7 +8,6 @@
 
 html {
 	position: relative;
-	height: 100%;
 	
 	&:before {
 		@include overlay();
@@ -18,8 +17,12 @@ html {
 
 body {
 	position: relative;
-	background: url('../images/mountain.jpg') no-repeat top $blue;
-	background-size: cover;
+	background: $lightest-gray;
+}
+
+
+main {
+	background: $lightest-gray;
 }
 
 .wrap {

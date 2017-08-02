@@ -53,13 +53,7 @@ class App extends Component {
 		return (
 			<main className="App">
 				<Form onInstrumentChange={ this.onInstrumentChange } />
-
-				{/* Testing */}
-				<div className="wrap">
-					<h3>{ this.state.sheets }</h3>
-				</div>
-
-				<Sheets />
+				<Sheets instrument={ this.state.instrument } />
 			</main>
 		);
 	}
