@@ -2,7 +2,7 @@
   "name": "musicdistro",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://jordanpak.github.io/musicdistro-react",
+  "homepage": "https://jordanpak.github.io/MusicDistro-React/",
   "dependencies": {
     "font-awesome": "^4.7.0",
     "gh-pages": "^1.0.0",
