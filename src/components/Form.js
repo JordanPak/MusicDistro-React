@@ -3,6 +3,15 @@ import React, { Component } from 'react';
 
 class Form extends Component {
 
+	getOptions = () => {
+		return ( this.props.instruments.map( ( instrument ) =>
+		
+			<option key={ instrument.key } value={ instrument.key } >
+				{ instrument.label }
+			</option>
+		));
+	}
+
 	render() {
 		return (
 			<section className="form"><div className="wrap">
@@ -10,13 +19,8 @@ class Form extends Component {
 
 					<label htmlFor="instrument">Select An Instrument</label>
 
-					<select name="instrument" id="instrument">
-						<option value="piccolo">Piccolo</option>
-						<option value="clarinet">Clarinet</option>
-						<option value="alto-sax">Alto Sax</option>
-						<option value="tenor-sax">Tenor Sax</option>
-					</select>
-
+					<select name="instrument" id="instrument">{ this.getOptions() }</select>
+					
 					<input type="submit" value="Go" />
 
 				</form>

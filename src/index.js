@@ -6,7 +6,8 @@ import ReactDOM from 'react-dom';
 import registerServiceWorker from './registerServiceWorker';
 
 // components
-import Form from './components/Form';
+import Form   from './components/Form';
+import Sheets from './components/Sheets';
 
 // assets
 // import logo from './images/logo.svg';
@@ -17,28 +18,50 @@ import './css/App.css';
 
 
 
+/**
+ * List of instruments
+ */
+var instruments = [
+	{
+		key   : 'piccolo',
+		label : 'Piccolo'
+	},
+	{
+		key   : 'clarinet',
+		label : 'Clarinet'
+	},
+	{
+		key   : 'alto-sax',
+		label : 'Alto Sax'
+	},
+	{
+		key   : 'tenor-sax',
+		label : 'Tenor Sax'
+	},
+	{
+		key   : 'trumpet',
+		label : 'Trumpet'
+	},
+	{
+		key   : 'mellophone',
+		label : 'Mellophone'
+	}
+];
+
+
+/**
+ * Main app
+ */
 const App = () => (
 	<main className="App">
-
-		{/* FORM */ }
-		<Form />
-
-		{/* TAG GRID */ }
-
+		<Form instruments={ instruments } />
+		<Sheets />
 	</main>
-
-
-	// <div className="App">
 
 	// 	<div className="App-header">
 	// 		<img src={logo} className="App-logo" alt="logo" />
 	// 		<h2>Welcome to React</h2>
 	// 	</div>
-
-	// 	<p className="App-intro">
-	// 		To get started, edit <code>src/App.js</code> and save to reload.
-	// 	</p>
-	// </div>
 );
 
 
