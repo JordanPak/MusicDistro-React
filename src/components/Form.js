@@ -5,7 +5,7 @@ class Form extends Component {
 
 	render() {
 		return (
-			<section className="form">
+			<section className="form"><div className="wrap">
 				<form action="">
 
 					<label htmlFor="instrument">Select An Instrument</label>
@@ -20,7 +20,7 @@ class Form extends Component {
 					<input type="submit" value="Go" />
 
 				</form>
-			</section>
+			</div></section>
 		);
 	}
 }

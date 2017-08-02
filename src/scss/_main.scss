@@ -12,7 +12,7 @@ html {
 	
 	&:before {
 		@include overlay();
-		background: rgba( $blue, 0.9 );
+		background: rgba( $white, 0.94 );
 	}
 }
 
@@ -23,7 +23,8 @@ body {
 }
 
 
-main {
-	margin: 60px auto 0;
+.wrap {
+	margin: 0 auto;
+	width: 90%;
 	max-width: 800px;
 }

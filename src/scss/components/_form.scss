@@ -2,15 +2,18 @@
  * MusicDistro | FORM
  */
 
+.form {
+	padding: 100px 0 40px;
+	background: $blue;
+}
+
+
 form {
 	display: inline-flex;
 	flex-flow: row wrap;
 	padding: 25px;
 	max-width: 350px;
 	font-size: 0;
-	background: $blue-dark;
-	box-shadow: 0 1px 28px rgba( #2f60e0, 0.5 );
-	border-radius: 6px;
 }
 
 label, input, select, textarea {
@@ -19,6 +22,7 @@ label, input, select, textarea {
 
 label {
 	margin-bottom: 10px;
+	padding-left: 2px;
 	text-transform: uppercase;
 	letter-spacing: 2px;
 	font-size: 14px;
