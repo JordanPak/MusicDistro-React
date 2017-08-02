@@ -1,3 +1,10 @@
+/**
+ * Main MusicDistro application
+ * 
+ * @since 0.1.0
+ * @package musicdistro
+ */
+
 // libs
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
@@ -5,16 +12,11 @@ import ReactDOM from 'react-dom';
 // service worker
 import registerServiceWorker from './registerServiceWorker';
 
-// components
+// assets & components
+import './assets';
 import Form   from './components/Form';
 import Sheets from './components/Sheets';
 
-// assets
-// import logo from './images/logo.svg';
-import 'typeface-oswald';
-import 'typeface-open-sans';
-import 'font-awesome/css/font-awesome.css';
-import './css/App.css';
 
 
 /**
@@ -25,11 +27,13 @@ class App extends Component {
 	// init state
 	constructor( props ) {
 		super( props );
+		
 		this.state = {
 			instrument : '',
-			sheets     : 'Chicken'
+			sheets     : ''
 		}
 	}
+
 
 	// update selected instrument and run
 	// the sheet grabber
@@ -40,9 +44,7 @@ class App extends Component {
 
 	// get the selected instrument's sheets
 	getSheets = () => {
-		this.setState({
-			sheets : 'Getting sheets for ' + this.state.instrument
-		});
+		this.setState({ sheets : 'Getting sheets for ' + this.state.instrument });
 	}
 
 
@@ -53,7 +55,9 @@ class App extends Component {
 				<Form onInstrumentChange={ this.onInstrumentChange } />
 
 				{/* Testing */}
-				<h3>{ this.state.sheets }</h3>
+				<div className="wrap">
+					<h3>{ this.state.sheets }</h3>
+				</div>
 
 				<Sheets />
 			</main>

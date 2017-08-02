@@ -424,13 +424,12 @@ button, [role="button"], [type="submit"] {
  * MusicDistro | FORM
  */
 .form {
-  padding: 100px 0 40px;
+  padding: 125px 0 65px;
   background: #2f5cda; }
 
 form {
   display: inline-flex;
   flex-flow: row wrap;
-  padding: 25px;
   max-width: 350px;
   font-size: 0; }
 

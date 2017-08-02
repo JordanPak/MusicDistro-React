@@ -1,5 +1,13 @@
+/**
+ * Form component
+ * 
+ * @since 0.1.0
+ * @package musicdistro
+ */
+
 // libs
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 
 /**
@@ -65,6 +73,16 @@ class Form extends Component {
 			</div></section>
 		);
 	}
-}
+} // class Form
 
+
+/**
+ * Define Form proptypes
+ */
+Form.propTypes = {
+	onInstrumentChange : PropTypes.func.isRequired
+};
+
+
+// give it
 export default Form;
