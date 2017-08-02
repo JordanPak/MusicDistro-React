@@ -17,38 +17,6 @@ import 'font-awesome/css/font-awesome.css';
 import './css/App.css';
 
 
-
-/**
- * List of instruments
- */
-var instruments = [
-	{
-		key   : 'piccolo',
-		label : 'Piccolo'
-	},
-	{
-		key   : 'clarinet',
-		label : 'Clarinet'
-	},
-	{
-		key   : 'alto-sax',
-		label : 'Alto Sax'
-	},
-	{
-		key   : 'tenor-sax',
-		label : 'Tenor Sax'
-	},
-	{
-		key   : 'trumpet',
-		label : 'Trumpet'
-	},
-	{
-		key   : 'mellophone',
-		label : 'Mellophone'
-	}
-];
-
-
 /**
  * Main app
  */
@@ -72,8 +40,7 @@ class App extends Component {
 	render() {
 		return (
 			<main className="App">
-				<Form instruments={ instruments }
-					onInstrumentChange={ this.onInstrumentChange } />
+				<Form onInstrumentChange={ this.onInstrumentChange } />
 				<Sheets />
 			</main>
 		);

@@ -1,23 +1,43 @@
 import React, { Component } from 'react';
 
 
+/**
+ * List of instruments
+ */
+var instruments = [
+	{
+		key   : 'piccolo',
+		label : 'Piccolo'
+	},
+	{
+		key   : 'clarinet',
+		label : 'Clarinet'
+	},
+	{
+		key   : 'alto-sax',
+		label : 'Alto Sax'
+	},
+	{
+		key   : 'tenor-sax',
+		label : 'Tenor Sax'
+	},
+	{
+		key   : 'trumpet',
+		label : 'Trumpet'
+	},
+	{
+		key   : 'mellophone',
+		label : 'Mellophone'
+	}
+];
+
+
 class Form extends Component {
 
 	// initialize the first instrument
 	constructor( props ) {
 		super( props );
-		this.state = { instrument : props.instruments[0].key }
-	}
-
-
-	// build our instrument options
-	getOptions = () => {
-		return ( this.props.instruments.map( ( instrument ) =>
-
-			<option key={ instrument.key } value={ instrument.key } >
-				{ instrument.label }
-			</option>
-		));
+		this.state = { instrument : instruments[0].key }
 	}
 
 
@@ -36,6 +56,15 @@ class Form extends Component {
 
 	// output the component
 	render() {
+
+		// build options
+		var options = instruments.map( ( instrument ) => 
+
+			<option key={ instrument.key } value={ instrument.key } >
+				{ instrument.label }
+			</option>
+		);
+
 		return (
 			<section className="form"><div className="wrap">
 				<form onSubmit={ this.handleSubmit }>
@@ -45,7 +74,7 @@ class Form extends Component {
 					<select name="instrument"
 					        id="instrument"
 							onChange={ this.handleInstrumentChange }>
-						{ this.getOptions() }
+						{ options }
 					</select>
 					
 					<input type="submit" value="Go" />
