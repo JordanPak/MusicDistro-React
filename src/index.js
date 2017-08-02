@@ -1,5 +1,5 @@
 // libs
-import React from 'react';
+import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 
 // service worker
@@ -52,17 +52,33 @@ var instruments = [
 /**
  * Main app
  */
-const App = () => (
-	<main className="App">
-		<Form instruments={ instruments } />
-		<Sheets />
-	</main>
+class App extends Component {
 
-	// 	<div className="App-header">
-	// 		<img src={logo} className="App-logo" alt="logo" />
-	// 		<h2>Welcome to React</h2>
-	// 	</div>
-);
+	// init state
+	constructor( props ) {
+		super( props );
+		this.state = {
+			instrument : ''
+		}
+	}
+
+	// update selected instrument
+	onInstrumentChange = ( instrument ) => {
+		this.setState({ instrument : instrument });
+	}
+
+
+	// output component
+	render() {
+		return (
+			<main className="App">
+				<Form instruments={ instruments }
+					onInstrumentChange={ this.onInstrumentChange } />
+				<Sheets />
+			</main>
+		);
+	}
+}
 
 
 // start the death!
