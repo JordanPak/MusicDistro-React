@@ -57,6 +57,9 @@ class Form extends Component {
 
 		return (
 			<section className="form"><div className="wrap">
+
+				<h1>MusicDistro</h1>
+
 				<form onSubmit={ this.handleSubmit }>
 
 					<label htmlFor="instrument">Select An Instrument</label>

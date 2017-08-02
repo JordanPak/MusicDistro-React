@@ -3,8 +3,24 @@
  */
 
 .form {
-	padding: 125px 0 65px;
+	padding: 125px 0 0 0;
 	background: $blue;
+
+	.wrap {
+		padding-bottom: 65px;
+	}
+
+	// title thing
+	h1 {
+		position: absolute;
+		bottom: -7px;
+		right: 0;
+		font-size: 54px;
+		color: $gray-lightest;
+		line-height: 1;
+		font-weight: 900;
+		letter-spacing: -2px;
+	}
 }
 
 

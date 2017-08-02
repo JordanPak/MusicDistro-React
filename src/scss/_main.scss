@@ -17,15 +17,16 @@ html {
 
 body {
 	position: relative;
-	background: $lightest-gray;
+	background: $gray-lightest;
 }
 
 
 main {
-	background: $lightest-gray;
+	background: $gray-lightest;
 }
 
 .wrap {
+	position: relative;
 	margin: 0 auto;
 	width: 90%;
 	max-width: 800px;
