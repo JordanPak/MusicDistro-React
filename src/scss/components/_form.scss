@@ -23,11 +23,12 @@ label, input, select, textarea {
 label {
 	margin-bottom: 10px;
 	padding-left: 2px;
+	width: 100%;
 	text-transform: uppercase;
 	letter-spacing: 2px;
 	font-size: 14px;
 	font-weight: 700;
-	width: 100%;
+	color: $white;
 }
 
 input, select, textarea {

@@ -26,13 +26,23 @@ class App extends Component {
 	constructor( props ) {
 		super( props );
 		this.state = {
-			instrument : ''
+			instrument : '',
+			sheets     : 'Chicken'
 		}
 	}
 
-	// update selected instrument
+	// update selected instrument and run
+	// the sheet grabber
 	onInstrumentChange = ( instrument ) => {
-		this.setState({ instrument : instrument });
+		this.setState({ instrument : instrument }, this.getSheets );
+	}
+
+
+	// get the selected instrument's sheets
+	getSheets = () => {
+		this.setState({
+			sheets : 'Getting sheets for ' + this.state.instrument.label
+		});
 	}
 
 
@@ -41,6 +51,10 @@ class App extends Component {
 		return (
 			<main className="App">
 				<Form onInstrumentChange={ this.onInstrumentChange } />
+
+				{/* Testing */}
+				<h3>{ this.state.sheets }</h3>
+
 				<Sheets />
 			</main>
 		);

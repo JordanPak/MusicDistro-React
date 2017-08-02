@@ -440,11 +440,12 @@ label, input, select, textarea {
 label {
   margin-bottom: 10px;
   padding-left: 2px;
+  width: 100%;
   text-transform: uppercase;
   letter-spacing: 2px;
   font-size: 14px;
   font-weight: 700;
-  width: 100%; }
+  color: #ffffff; }
 
 input, select, textarea {
   vertical-align: text-top;
@@ -466,7 +467,6 @@ select {
  */
 body {
   font-size: 16px;
-  color: #ffffff;
   font-family: "Open Sans", sans-serif; }
 
 h1, h2, h3, h4, h5, h6 {

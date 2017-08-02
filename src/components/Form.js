@@ -37,13 +37,19 @@ class Form extends Component {
 	// initialize the first instrument
 	constructor( props ) {
 		super( props );
-		this.state = { instrument : instruments[0].key }
+		this.state = { instrument : instruments[0] }
 	}
 
 
 	// update the instrument state on change
 	handleInstrumentChange = ( e ) => {
-		this.setState({ instrument : e.target.value });
+
+		this.setState({ instrument : {
+			key   : e.target.value,
+			label : instruments.find( function( instrument ) {
+				return instrument.key === e.target.value
+			}).label
+		}});
 	}
 
 
