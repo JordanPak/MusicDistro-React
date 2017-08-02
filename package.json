@@ -2,6 +2,7 @@
   "name": "musicdistro",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://jordanpak.github.io/musicdistro-react",
   "dependencies": {
     "font-awesome": "^4.7.0",
     "node-sass-chokidar": "0.0.3",
