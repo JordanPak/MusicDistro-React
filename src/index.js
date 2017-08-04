@@ -25,7 +25,7 @@ import Sheets     from './components/Sheets';
 /**
  * Get the tags & songs
  */
-var allTags        = [];
+var allTags        = []; //{};
 var allSongs       = [];
 var allInstruments = [];
 
@@ -34,8 +34,12 @@ for ( var [ song, data ] of Object.entries( sheetMusic ) ) {
 	// add the song
 	allSongs = allSongs.concat( song );
 
-	// add the tag
+	// add the tags
 	allTags = allTags.concat( data.tags );
+	// data.tags.forEach( function( tag ) {
+	// 	allTags[ tag ] = song;
+	// });
+
 
 	// remove tag from the object so we just
 	// have instruments
