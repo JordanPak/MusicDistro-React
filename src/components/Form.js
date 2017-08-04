@@ -24,13 +24,6 @@ var instruments = [
  */
 class Form extends Component {
 
-	// initialize the first instrument
-	constructor( props ) {
-		super( props );
-		this.state = { instrument : instruments[0] }
-	}
-
-
 	// update the instrument state on change
 	handleInstrumentChange = ( e ) => {
 		this.props.onInstrumentChange( e.target.value );
@@ -55,18 +48,15 @@ class Form extends Component {
 
 				<form onSubmit={ this.handleSubmit }>
 
-					{/* <label htmlFor="instrument">Select An Instrument</label> */}
-
 					<select name="instrument"
 					        id="instrument"
-							value="SELECT"
+							defaultValue=""
 							onChange={ this.handleInstrumentChange }>
 
-						<option value="SELECT" disabled>Select an Instrument</option>
+						<option value="" disabled>Select an Instrument</option>  
 						{ options }
 					</select>
-					
-					{/* <input type="submit" value="Go" /> */}
+
 				</form>
 			</div></section>
 		);

@@ -36,6 +36,10 @@ form {
 label, input, select, textarea {
 	display: inline-block;
 	font-family: $font-sans-serif;
+
+	&:focus {
+		outline: none;
+	}
 }
 
 label {

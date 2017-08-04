@@ -451,6 +451,8 @@ form {
 label, input, select, textarea {
   display: inline-block;
   font-family: "Open Sans", sans-serif; }
+  label:focus, input:focus, select:focus, textarea:focus {
+    outline: none; }
 
 label {
   margin-bottom: 10px;
