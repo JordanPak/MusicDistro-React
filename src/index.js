@@ -18,7 +18,49 @@ import sheetMusic from './sheet-music.json';
 import Form       from './components/Form';
 import Sheets     from './components/Sheets';
 
-console.log( sheetMusic );
+// console.log( sheetMusic );
+
+
+
+/**
+ * Get the tags & songs
+ */
+var allTags        = [];
+var allSongs       = [];
+var allInstruments = [];
+
+for ( var [key, value] of Object.entries( sheetMusic ) ) {
+
+	// add the song
+	allSongs = allSongs.concat( key );
+
+	// add the tag
+	allTags = allTags.concat( value.tags );
+
+	// remove tag from the object so we just
+	// have instruments
+	delete value.tags;
+	
+	console.log( value );
+
+	// traverse instruments
+	for ( var [ instrument, links ] of Object.entries( value ) ) {
+		console.log( instrument, links );
+		allInstruments = allInstruments.concat( instrument );
+	}
+	console.log( '-------------------------------------------' );
+}
+
+// filter duplicates
+allTags        = Array.from( new Set( allTags ) );
+allInstruments = Array.from( new Set( allInstruments ) );
+
+
+// testing
+console.log( '====================================================' );
+console.log( 'ALL SONGS', allSongs );
+console.log( 'ALL TAGS', allTags );
+console.log( 'ALL INSTRUMENTS', allInstruments );
 
 
 /**
