@@ -29,22 +29,22 @@ var allTags        = [];
 var allSongs       = [];
 var allInstruments = [];
 
-for ( var [key, value] of Object.entries( sheetMusic ) ) {
+for ( var [ song, data ] of Object.entries( sheetMusic ) ) {
 
 	// add the song
-	allSongs = allSongs.concat( key );
+	allSongs = allSongs.concat( song );
 
 	// add the tag
-	allTags = allTags.concat( value.tags );
+	allTags = allTags.concat( data.tags );
 
 	// remove tag from the object so we just
 	// have instruments
-	delete value.tags;
+	delete data.tags;
 	
-	console.log( value );
+	console.log( data );
 
 	// traverse instruments
-	for ( var [ instrument, links ] of Object.entries( value ) ) {
+	for ( var [ instrument, links ] of Object.entries( data ) ) {
 		console.log( instrument, links );
 		allInstruments = allInstruments.concat( instrument );
 	}
