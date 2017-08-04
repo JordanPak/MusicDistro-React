@@ -14,9 +14,11 @@ import registerServiceWorker from './registerServiceWorker';
 
 // assets & components
 import './assets';
-import Form   from './components/Form';
-import Sheets from './components/Sheets';
+import sheetMusic from './sheet-music.json';
+import Form       from './components/Form';
+import Sheets     from './components/Sheets';
 
+console.log( sheetMusic );
 
 
 /**
