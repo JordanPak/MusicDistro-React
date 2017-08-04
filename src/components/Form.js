@@ -33,14 +33,7 @@ class Form extends Component {
 
 	// update the instrument state on change
 	handleInstrumentChange = ( e ) => {
-		this.setState({ instrument : e.target.value });
-	}
-
-
-	// send the new instrument to the app
-	handleSubmit = ( e ) => {
-		e.preventDefault();
-		this.props.onInstrumentChange( this.state.instrument );
+		this.props.onInstrumentChange( e.target.value );
 	}
 
 
@@ -62,16 +55,18 @@ class Form extends Component {
 
 				<form onSubmit={ this.handleSubmit }>
 
-					<label htmlFor="instrument">Select An Instrument</label>
+					{/* <label htmlFor="instrument">Select An Instrument</label> */}
 
 					<select name="instrument"
 					        id="instrument"
+							value="SELECT"
 							onChange={ this.handleInstrumentChange }>
+
+						<option value="SELECT" disabled>Select an Instrument</option>
 						{ options }
 					</select>
 					
-					<input type="submit" value="Go" />
-
+					{/* <input type="submit" value="Go" /> */}
 				</form>
 			</div></section>
 		);
