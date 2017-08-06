@@ -6,57 +6,41 @@
  */
 
 // libs
-import React, { Component } from 'react';
+import React     from 'react';
 import PropTypes from 'prop-types';
 
 
 /**
- * Form class
+ * Build form
+ * 
+ * @param object  props  instruments and data callback 
  */
-class Form extends Component {
+const Form = ( props ) => (
+	<section className="form"><div className="wrap">
 
-	// output the component
-	render() {
+		<h1>MusicDistro</h1>
 
-		// build options
-		var options = this.props.instruments.map( ( instrument, index ) => 
+		<form onSubmit={ this.handleSubmit }>
 
-			<option key={ index } value={ instrument } >
-				{ instrument }
-			</option>
-		);
+			<select name="instrument"
+					id="instrument"
+					defaultValue=""
+					onChange={ ( e ) => { props.onInstrumentChange( e.target.value ) } } >
 
-		return (
-			<section className="form"><div className="wrap">
+				<option value="" disabled>Select an Instrument</option>  
 
-				<h1>MusicDistro</h1>
+				{ props.instruments.map( ( instrument, index ) =>
+					<option key={ index } value={ instrument }>{ instrument }</option>
+				) }				
+			</select>
 
-				<form onSubmit={ this.handleSubmit }>
+		</form>
+	</div></section>
+);
 
-					<select name="instrument"
-					        id="instrument"
-							defaultValue=""
-							onChange={ ( e ) => { this.props.onInstrumentChange( e.target.value ) } } >
-
-						<option value="" disabled>Select an Instrument</option>  
-						{ options }
-					</select>
-
-				</form>
-			</div></section>
-		);
-	}
-} // class Form
-
-
-/**
- * Define Form proptypes
- */
 Form.propTypes = {
 	instruments			: PropTypes.array.isRequired,
 	onInstrumentChange	: PropTypes.func.isRequired
 };
 
-
-// give it
 export default Form;
