@@ -17,7 +17,6 @@
         "tags"      : [ "Halftime Show 2", "Stands Tunes" ],
         "Piccolo"   : [ "https://yo.lo/p1", "https://yo.lo/p2" ],
         "Clarinet"  : [ "https://yo.lo/cl1", "https://yo.lo/cl2" ],
-        "Alto Sax"  : [ "https://yo.lo/cl1", "https://yo.lo/cl2" ],
-        "Tenor Sax" : [ "https://yo.lo/cl1", "https://yo.lo/cl2" ]
+        "Alto Sax"  : [ "https://yo.lo/cl1", "https://yo.lo/cl2" ]
     }
 }
