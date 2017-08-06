@@ -14,19 +14,25 @@ import sheetMusic from './sheet-music.json';
  * Get the tags & songs
  */
 var allTags        = []; //{};
-var allSongs       = [];
+// var allSongs       = [];
 var allInstruments = [];
 
 for ( var [ song, data ] of Object.entries( sheetMusic ) ) {
 
 	// add the song
-	allSongs = allSongs.concat( song );
+	// allSongs = allSongs.concat( song );
 
-	// add the tags
-	allTags = allTags.concat( data.tags );
-	// data.tags.forEach( function( tag ) {
-	// 	allTags[ tag ] = song;
-	// });
+
+	// loop through tags and add the
+	// current song to the list
+	data.tags.forEach( function( tag ) {
+
+		if ( ! allTags[ tag ] ) {
+			allTags[ tag ] = [ song ];
+		} else {
+			allTags[ tag ].push( song );
+		}
+	});
 
 
 	// remove tag from the object so we just
@@ -37,22 +43,20 @@ for ( var [ song, data ] of Object.entries( sheetMusic ) ) {
 
 	// traverse instruments
 	for ( var [ instrument, links ] of Object.entries( data ) ) {
-		console.log( instrument, links );
+		// console.log( instrument, links );
 		allInstruments = allInstruments.concat( instrument );
 	}
 	console.log( '-------------------------------------------' );
 }
 
 // filter duplicates
+console.log( 'ALL TAGS', allTags );
 allTags        = Array.from( new Set( allTags ) );
 allInstruments = Array.from( new Set( allInstruments ) );
 
 
 // testing
 console.log( '====================================================' );
-console.log( 'ALL SONGS', allSongs );
-console.log( 'ALL TAGS', allTags );
-console.log( 'ALL INSTRUMENTS', allInstruments );
 
 
 // configure main object
