@@ -11,25 +11,15 @@ import PropTypes from 'prop-types';
 
 
 /**
- * List of instruments
- */
-var instruments = [
-	'Piccolo', 'Clarinet', 'Alto Sax', 'Tenor Sax',
-	'Trumpet', 'Mellophone'
-];
-
-
-/**
  * Form class
  */
 class Form extends Component {
-
 
 	// output the component
 	render() {
 
 		// build options
-		var options = instruments.map( ( instrument, index ) => 
+		var options = this.props.instruments.map( ( instrument, index ) => 
 
 			<option key={ index } value={ instrument } >
 				{ instrument }
@@ -63,7 +53,8 @@ class Form extends Component {
  * Define Form proptypes
  */
 Form.propTypes = {
-	onInstrumentChange : PropTypes.func.isRequired
+	instruments			: PropTypes.array.isRequired,
+	onInstrumentChange	: PropTypes.func.isRequired
 };
 
 

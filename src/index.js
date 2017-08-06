@@ -54,7 +54,9 @@ class App extends Component {
 	render() {
 		return (
 			<main className="App">
-				<Form onInstrumentChange={ this.onInstrumentChange } />
+				<Form instruments={ sheetData.instruments }
+				      onInstrumentChange={ this.onInstrumentChange } />
+
 				<Sheets instrument={ this.state.instrument } />
 			</main>
 		);
