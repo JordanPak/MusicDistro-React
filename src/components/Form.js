@@ -24,11 +24,6 @@ var instruments = [
  */
 class Form extends Component {
 
-	// update the instrument state on change
-	handleInstrumentChange = ( e ) => {
-		this.props.onInstrumentChange( e.target.value );
-	}
-
 
 	// output the component
 	render() {
@@ -51,7 +46,7 @@ class Form extends Component {
 					<select name="instrument"
 					        id="instrument"
 							defaultValue=""
-							onChange={ this.handleInstrumentChange }>
+							onChange={ ( e ) => { this.props.onInstrumentChange( e.target.value ) } } >
 
 						<option value="" disabled>Select an Instrument</option>  
 						{ options }
