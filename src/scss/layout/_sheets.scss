@@ -4,4 +4,29 @@
 
 .sheets {
 	padding: 80px 0 50px;
+
+	figure {
+		margin-bottom: 30px;
+	}
+
+	figcaption {
+		padding: 20px;
+		background: $blue; //$gold-mid;
+		color: $white;
+		font-weight: 700;
+		font-size: 18px;
+	}
+
+	@include breakpoint( medium ) {
+
+		.wrap {
+			font-size: 0;
+		}
+
+		figure {
+			flex: 0 1 auto;
+			justify-content: space-between;
+			width: 48%;
+		}
+	}
 }

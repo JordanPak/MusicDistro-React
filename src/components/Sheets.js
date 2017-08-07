@@ -19,24 +19,6 @@ import Tag from './Tag';
 class Sheets extends Component {
 
 	/**
-	 * Generate warning message
-	 */
-	warningMessage = () => {
-
-		// no instrument?
-		if ( ! this.props.instrument ) {
-			return <h2>Select an instrument yo</h2>
-		}
-		
-		// no tags?
-		else if ( Object.keys( this.props.tags ).length === 0 ) {
-			console.log( 'ELLO POPPET' );
-			return <h2>There aren't any tagged arrangements :(</h2>
-		}
-	}
-
-
-	/**
 	 * Get a tag's arrangements
 	 * 
 	 * @param  string  title         the current tag's name/title
@@ -69,10 +51,17 @@ class Sheets extends Component {
 	 * Show the tags or warning
 	 */
 	render() {
+
+		// no instruments or tags?
+		if ( ! this.props.instrument ) {
+			return null;
+		} else if ( Object.keys( this.props.tags ).length === 0 ) {
+			console.log( 'No tagged arrangements found' );
+			return null;
+		}
+
 		return (
 			<section className="sheets"><div className="wrap">
-				{ this.warningMessage() }
-
 				{ this.props.instrument ? Object.keys( this.props.tags ).map( ( title, index ) => (
 					<Tag key={ index }
 					     title={ title }

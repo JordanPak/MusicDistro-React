@@ -5,6 +5,7 @@
 @import "normalize";
 @import "mixins";
 @import "variables";
+@import "breakpoints";
 
 @import "components/button";
 @import "components/form";
@@ -13,3 +14,9 @@
 @import "main";
 
 @import "layout/sheets";
+
+
+.breakpoint-test {
+	display: none;
+	@include breakpoint-test();
+}

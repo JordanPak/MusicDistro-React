@@ -31,3 +31,13 @@ main {
 	width: 90%;
 	max-width: 800px;
 }
+
+
+figure {
+	margin: 0;
+	padding: 0;
+	background: $white;
+	box-shadow: 0 2px 30px rgba( $blue, 0.1 );
+	border-radius: 6px;
+	overflow: hidden;
+}
