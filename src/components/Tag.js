@@ -7,7 +7,7 @@
 
 // libs
 import React, { Component } from 'react';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 
 
 /**
@@ -25,7 +25,11 @@ class Tag extends Component {
 
 		return (
 			<figure>
-				<figcaption>{ this.props.title }</figcaption>	
+				<figcaption>{ this.props.title }</figcaption>
+
+				<ul>{ Object.keys( this.props.arrangements ).map( ( title, index ) => (
+					<li key={ index }>{ title }</li>
+				)) }</ul>
 			</figure>
 		);
 	}
@@ -35,9 +39,10 @@ class Tag extends Component {
 /**
  * Define props
  */
-// Tag.propTypes = {
-
-// };
+Tag.propTypes = {
+	title			: PropTypes.string.isRequired,
+	arrangements	: PropTypes.object
+};
 
 
 // get going

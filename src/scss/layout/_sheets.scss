@@ -7,15 +7,25 @@
 
 	figure {
 		margin-bottom: 30px;
+		font-size: 16px;
 	}
 
 	figcaption {
-		padding: 20px;
+		padding: 18px 20px;
 		background: $blue; //$gold-mid;
 		color: $white;
 		font-weight: 700;
 		font-size: 18px;
 	}
+
+	ul {
+		padding: 10px;
+
+		li {
+			padding: 14px 10px;
+		}
+	}
+
 
 	@include breakpoint( medium ) {
 
@@ -24,9 +34,14 @@
 		}
 
 		figure {
-			flex: 0 1 auto;
-			justify-content: space-between;
+			display: inline-block;
+			vertical-align: text-top;
 			width: 48%;
+			margin-right: 4%;
+
+			&:nth-child( even ) {
+				margin-right: 0;
+			}
 		}
-	}
+	} // bp: medium
 }
