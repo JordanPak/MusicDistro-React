@@ -57,7 +57,8 @@ class App extends Component {
 				<Form instruments={ sheetData.instruments }
 				      onInstrumentChange={ this.onInstrumentChange } />
 
-				<Sheets instrument={ this.state.instrument } />
+				<Sheets instrument={ this.state.instrument }
+				        arrangements={ sheetData.arrangements } />
 			</main>
 		);
 	}

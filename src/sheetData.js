@@ -14,7 +14,7 @@ import sheetMusic from './sheet-music.json';
  */
 var allTags        = [];
 var allInstruments = [];
-// var allSongs       = [];
+// var allArrangements       = [];
 
 
 /**
@@ -28,11 +28,11 @@ var allInstruments = [];
 function setTag( tag ) {
 	
 	if ( ! allTags[ tag ] ) {
-		allTags[ tag ] = [ song ];
+		allTags[ tag ] = [ arrangement ];
 	}
 	
 	else {
-		allTags[ tag ].push( song );
+		allTags[ tag ].push( arrangement );
 	}
 }
 
@@ -40,10 +40,10 @@ function setTag( tag ) {
 /**
  * Arrangement loop
  */
-for ( var [ song, data ] of Object.entries( sheetMusic ) ) {
+for ( var [ arrangement, data ] of Object.entries( sheetMusic ) ) {
 
-	// add the song
-	// allSongs = allSongs.concat( song );
+	// add the arrangement
+	// allArrangements = allArrangements.concat( arrangement );
 
 	// set arrangement tags
 	data.tags.forEach( setTag );
