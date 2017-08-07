@@ -31,9 +31,9 @@ class Tag extends Component {
 				<figcaption>{ this.props.title }</figcaption>
 
 				<ul>{ Object.keys( this.props.arrangements ).map( ( title, index ) => (
-					<Arrangement key    = { index }
-					             sheets = { this.props.arrangements[ title ] }
-					             title  = { title } />
+					<Arrangement key={ index }
+					             sheets={ this.props.arrangements[ title ] }
+					             title={ title } />
 				)) }</ul>
 			</figure>
 		);

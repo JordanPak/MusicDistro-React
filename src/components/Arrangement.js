@@ -19,7 +19,12 @@ class Arrangement extends Component {
 	// show this thing
 	render() {
 		return(
-			<li>{ this.props.title }</li>
+			<li>
+				{ this.props.title }
+				{ this.props.sheets.map( ( link, index ) =>
+					<a key={ index } href={ link }>DL</a>
+				) }		
+			</li>
 		);
 	}
 }
