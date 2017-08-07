@@ -18,8 +18,6 @@ import sheetData from './sheetData';
 import Form      from './components/Form';
 import Sheets    from './components/Sheets';
 
-console.log( sheetData );
-
 
 /**
  * Main app
@@ -32,7 +30,7 @@ class App extends Component {
 		
 		this.state = {
 			instrument : '',
-			sheets     : ''
+			// sheets     : ''
 		}
 	}
 
@@ -40,24 +38,28 @@ class App extends Component {
 	// update selected instrument and run
 	// the sheet grabber
 	onInstrumentChange = ( instrument ) => {
-		this.setState({ instrument : instrument }, this.getSheets );
+		this.setState({ instrument : instrument } ); //, this.getSheets );
 	}
 
 
 	// get the selected instrument's sheets
-	getSheets = () => {
-		this.setState({ sheets : 'Getting sheets for ' + this.state.instrument });
-	}
+	// getSheets = () => {
+	// 	this.setState({ sheets : 'Getting sheets for ' + this.state.instrument });
+	// }
 
 
 	// output component
 	render() {
+		
+		console.log( 'RENDERING!' );
+
 		return (
 			<main className="App">
 				<Form instruments={ sheetData.instruments }
 				      onInstrumentChange={ this.onInstrumentChange } />
 
 				<Sheets instrument={ this.state.instrument }
+				        tags={ sheetData.tags }
 				        arrangements={ sheetData.arrangements } />
 			</main>
 		);

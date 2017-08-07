@@ -12,7 +12,7 @@ import sheetMusic from './sheet-music.json';
 /**
  * Tag / instrument store
  */
-var allTags        = [];
+var allTags        = {};
 var allInstruments = [];
 // var allArrangements       = [];
 

@@ -17,6 +17,8 @@ class Sheets extends Component {
 
 	render() {
 
+		console.log( this.props );
+
 		var message = this.props.instrument ? <h1>Getting { this.props.instrument } sheets</h1> : "";
 
 		return (
@@ -32,7 +34,8 @@ class Sheets extends Component {
  * Define props
  */
 Sheets.propTypes = {
-	instrument : PropTypes.string
+	instrument		: PropTypes.string,
+	arrangements	: PropTypes.object
 };
 
 
