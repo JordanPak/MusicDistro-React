@@ -3,7 +3,7 @@
  */
 
 .sheets {
-	padding: 80px 0 50px;
+	padding: 65px 0 0;
 
 	figure, .tag-sizer {
 		width: 100%;
@@ -79,6 +79,11 @@
 	} // ul
 
 
+	@include breakpoint( small ) {
+		padding-top: 80px;
+	}
+
+
 	@include breakpoint( medium ) {
 
 		.wrap {
@@ -92,5 +97,10 @@
 		.tag-gutter {
 			width: 4%;
 		}
+	}
+
+
+	@include breakpoint( large ) {
+		padding-top: 100px;	
 	}
 }

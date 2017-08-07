@@ -427,32 +427,45 @@ button, [role="button"], [type="submit"] {
  * MusicDistro | FORM
  */
 .form {
-  padding: 40px 0 0 0;
+  padding: 25px 0 0 0;
   background: #2f5cda; }
   .form h1 {
     position: absolute;
-    bottom: -7px;
-    right: 0;
-    font-size: 54px;
-    color: #f7f7f7;
+    top: -3px;
+    color: #163b9a;
+    font-size: 44px;
     line-height: 1;
     font-weight: 900;
     letter-spacing: -2px; }
+  @media (min-width: 460px) {
+    .form {
+      padding-top: 40px; }
+      .form h1 {
+        top: auto;
+        bottom: -7px;
+        right: 0;
+        color: #f7f7f7;
+        font-size: 54px; } }
 
 form {
   display: inline-block;
   position: relative;
   bottom: -30px;
   padding: 10px;
-  max-width: 350px;
+  width: 100%;
   font-size: 0;
   font-family: "Open Sans", sans-serif;
   background: #ffe000;
   box-shadow: 0 2px 30px rgba(47, 92, 218, 0.1);
   border-radius: 6px; }
+  @media (min-width: 460px) {
+    form {
+      width: auto;
+      max-width: 320px; } }
 
 label, input, select, textarea {
   display: inline-block;
+  width: 100%;
   font-family: "Open Sans", sans-serif; }
   label:focus, input:focus, select:focus, textarea:focus {
     outline: none; }
@@ -557,7 +570,7 @@ figure {
  * Music Distro | SHEETS
  */
 .sheets {
-  padding: 80px 0 50px; }
+  padding: 65px 0 0; }
   .sheets figure, .sheets .tag-sizer {
     width: 100%; }
   .sheets .tag-gutter {
@@ -606,6 +619,9 @@ figure {
           font-family: "FontAwesome";
           font-size: 16px;
           font-weight: 400; }
+  @media (min-width: 460px) {
+    .sheets {
+      padding-top: 80px; } }
   @media (min-width: 640px) {
     .sheets .wrap {
       font-size: 0; }
@@ -613,6 +629,64 @@ figure {
       width: 48%; }
     .sheets .tag-gutter {
       width: 4%; } }
+  @media (min-width: 1024px) {
+    .sheets {
+      padding-top: 100px; } }
 
 .breakpoint-test {
-  display: none; }
+  display: none;
+  display: block;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 9999;
+  min-width: 200px;
+  padding: 10px 15px;
+  text-align: center;
+  border-radius: 0 10px 0 0;
+  background: rgba(0, 0, 0, 0.9) !important;
+  color: #ffffff;
+  font-family: sans-serif;
+  font-size: 14px; }
+  .breakpoint-test .name::after {
+    display: inline-block;
+    font-weight: bold; }
+    @media (min-width: 0px) {
+      .breakpoint-test .name::after {
+        content: "zero"; } }
+    @media (min-width: 460px) {
+      .breakpoint-test .name::after {
+        content: "small"; } }
+    @media (min-width: 640px) {
+      .breakpoint-test .name::after {
+        content: "medium"; } }
+    @media (min-width: 1024px) {
+      .breakpoint-test .name::after {
+        content: "large"; } }
+    @media (min-width: 1200px) {
+      .breakpoint-test .name::after {
+        content: "xlarge"; } }
+    @media (min-width: 1440px) {
+      .breakpoint-test .name::after {
+        content: "xxlarge"; } }
+  .breakpoint-test .size::after {
+    display: inline-block;
+    margin-left: 10px; }
+    @media (min-width: 0px) {
+      .breakpoint-test .size::after {
+        content: "(0px)"; } }
+    @media (min-width: 460px) {
+      .breakpoint-test .size::after {
+        content: "(460px)"; } }
+    @media (min-width: 640px) {
+      .breakpoint-test .size::after {
+        content: "(640px)"; } }
+    @media (min-width: 1024px) {
+      .breakpoint-test .size::after {
+        content: "(1024px)"; } }
+    @media (min-width: 1200px) {
+      .breakpoint-test .size::after {
+        content: "(1200px)"; } }
+    @media (min-width: 1440px) {
+      .breakpoint-test .size::after {
+        content: "(1440px)"; } }

@@ -3,19 +3,30 @@
  */
 
 .form {
-	padding: 40px 0 0 0;
+	padding: 25px 0 0 0;
 	background: $blue;
 	
 	// title thing
 	h1 {
 		position: absolute;
-		bottom: -7px;
-		right: 0;
-		font-size: 54px;
-		color: $gray-lightest;
+		top: -3px;
+		color: $blue-dark;
+		font-size: 44px;
 		line-height: 1;
 		font-weight: 900;
 		letter-spacing: -2px;
+	}
+
+	@include breakpoint( small ) {
+		padding-top: 40px;
+		
+		h1 {
+			top: auto;
+			bottom: -7px;
+			right: 0;
+			color: $gray-lightest;
+			font-size: 54px;
+		}
 	}
 }
 
@@ -25,16 +36,23 @@ form {
 	position: relative;
 	bottom: -30px;
 	padding: 10px;
-	max-width: 350px;
+	width: 100%;
 	font-size: 0;
 	font-family: $font-sans-serif;
 	background: $gold;
 	box-shadow: 0 2px 30px rgba( $blue, 0.1 );
 	border-radius: 6px;
+
+	@include breakpoint( small ) {
+		width: auto;
+		max-width: 320px;
+	}
 }
+
 
 label, input, select, textarea {
 	display: inline-block;
+	width: 100%;
 	font-family: $font-sans-serif;
 
 	&:focus {
