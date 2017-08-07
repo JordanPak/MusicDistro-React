@@ -24,31 +24,26 @@ import Sheets    from './components/Sheets';
  */
 class App extends Component {
 
-	// init state
+	/**
+	 * Init state
+	 */
 	constructor( props ) {
 		super( props );
-		
-		this.state = {
-			instrument : '',
-			// sheets     : ''
-		}
+		this.state = { instrument : '', }
 	}
 
 
-	// update selected instrument and run
-	// the sheet grabber
+	/**
+	 * Update selected instrument
+	 */
 	onInstrumentChange = ( instrument ) => {
-		this.setState({ instrument : instrument } ); //, this.getSheets );
+		this.setState({ instrument : instrument });
 	}
 
 
-	// get the selected instrument's sheets
-	// getSheets = () => {
-	// 	this.setState({ sheets : 'Getting sheets for ' + this.state.instrument });
-	// }
-
-
-	// output component
+	/**
+	 * Slaughter
+	 */
 	render() {
 		return (
 			<main className="App">
@@ -64,6 +59,8 @@ class App extends Component {
 }
 
 
-// start the death!
+/**
+ * Gametime
+ */
 ReactDOM.render(<App />, document.getElementById('root'));
 registerServiceWorker();
