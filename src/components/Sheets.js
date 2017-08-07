@@ -9,6 +9,9 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
+// components
+import Tag from './Tag';
+
 
 /**
  * Sheets class
@@ -36,6 +39,17 @@ class Sheets extends Component {
 		return (
 			<section className="sheets"><div className="wrap">
 				{ this.warningMessage() }
+				{ Object.keys( this.props.tags ).map((key, index) => ( 
+					<p key={index}> this is my key {key} and this is my value {this.props.tags[key]}</p> 
+				)) }
+
+				{ Object.keys( this.props.tags ).map( ( title, index ) => (
+					<Tag key={ index }
+					     title={ title }
+						 instrument={ this.props.instrument }
+						 arrangements={ this.getTagArrangements( title ) } />
+				)) }
+
 			</div></section>
 		);
 	}
