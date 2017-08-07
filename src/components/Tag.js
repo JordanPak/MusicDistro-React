@@ -18,7 +18,7 @@ class Tag extends Component {
 	// show this thing
 	render() {
 		return (
-			<figure>A Tag</figure>
+			<figure><figcaption>{ this.props.title }</figcaption></figure>
 		);
 	}
 }

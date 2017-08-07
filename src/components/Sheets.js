@@ -62,12 +62,12 @@ class Sheets extends Component {
 			<section className="sheets"><div className="wrap">
 				{ this.warningMessage() }
 
-				{ Object.keys( this.props.tags ).map( ( title, index ) => (
+				{ this.props.tags ? Object.keys( this.props.tags ).map( ( title, index ) => (
 					<Tag key={ index }
 					     title={ title }
 						 instrument={ this.props.instrument }
 						 arrangements={ this.getTagArrangements( title ) } />
-				)) }
+				)) : null }
 			</div></section>
 		);
 	}
