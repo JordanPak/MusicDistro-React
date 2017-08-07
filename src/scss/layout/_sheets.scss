@@ -4,6 +4,12 @@
 
 .sheets {
 	padding: 65px 0 0;
+	opacity: 1;
+	transition: opacity ease-in-out 500ms;
+
+	// &.updating {
+	// 	opacity: 0;
+	// }
 
 	figure, .tag-sizer {
 		width: 100%;

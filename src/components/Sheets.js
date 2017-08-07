@@ -28,6 +28,35 @@ var masonryOptions = {
  */
 class Sheets extends Component {
 
+	constructor( props ) {
+		super( props );
+		this.state = { updating : '' };
+	}
+
+
+	/**
+	 * Fade out before update
+	 */
+	componentWillReceiveProps = () => {
+		this.setState({ updating : 'updating' });
+	}
+
+
+	/**
+	 * Fade back in after update
+	 */
+	componentDidUpdate = () => {
+
+		if ( this.state.updating !== 'updating' ) {
+			return;
+		}
+
+		// setTimeout( function() {
+			this.setState({ updating : '' });
+		// }.bind( this ), 500 );
+	}
+
+
 	/**
 	 * Get a tag's arrangements
 	 * 
@@ -71,7 +100,7 @@ class Sheets extends Component {
 
 		// slaughter
 		return (
-			<section className="sheets"><div className="wrap">
+			<section className={ this.state.updating + ' sheets' }><div className="wrap">
 
 				{/* Masonry Layout */}
 				<Masonry className={ 'chicken' }

@@ -574,7 +574,9 @@ figure {
  * Music Distro | SHEETS
  */
 .sheets {
-  padding: 65px 0 0; }
+  padding: 65px 0 0;
+  opacity: 1;
+  transition: opacity ease-in-out 500ms; }
   .sheets figure, .sheets .tag-sizer {
     width: 100%; }
   .sheets .tag-gutter {
