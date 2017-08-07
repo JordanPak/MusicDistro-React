@@ -18,7 +18,9 @@ import Tag from './Tag';
  */
 class Sheets extends Component {
 
-	// warning?
+	/**
+	 * Generate warning message
+	 */
 	warningMessage = () => {
 
 		// no instrument?
@@ -34,14 +36,31 @@ class Sheets extends Component {
 	}
 
 
-	// show this thing
+	/**
+	 * Get a tag's arrangements
+	 * 
+	 * @param  string  title         the current tag's name/title
+	 * @return object  arrangements  key: arrangement's name. value: arrangement's arrangements 
+	 */
+	getTagArrangements = ( title ) => {
+		
+		var arrangements = {};
+
+		this.props.tags[ title ].forEach( ( arrangement ) => {
+			arrangements[ arrangement ] = this.props.arrangements[ arrangement ];
+		}, this );
+
+		return arrangements;
+	}
+
+
+	/**
+	 * Show the tags or warning
+	 */
 	render() {
 		return (
 			<section className="sheets"><div className="wrap">
 				{ this.warningMessage() }
-				{ Object.keys( this.props.tags ).map((key, index) => ( 
-					<p key={index}> this is my key {key} and this is my value {this.props.tags[key]}</p> 
-				)) }
 
 				{ Object.keys( this.props.tags ).map( ( title, index ) => (
 					<Tag key={ index }
@@ -49,7 +68,6 @@ class Sheets extends Component {
 						 instrument={ this.props.instrument }
 						 arrangements={ this.getTagArrangements( title ) } />
 				)) }
-
 			</div></section>
 		);
 	}
