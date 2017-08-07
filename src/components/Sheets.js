@@ -16,7 +16,10 @@ import Tag from './Tag';
 
 // masonry options
 var masonryOptions = {
-	transitionDuration : 0
+	transitionDuration : 0,
+	columnWidth        : '.tag-sizer',
+	gutter             : '.tag-gutter',
+	itemSelector       : 'figure'
 };
 
 
@@ -53,7 +56,7 @@ class Sheets extends Component {
 		return arrangements;
 	}
 
-	
+
 	/**
 	 * Show the tags or warning
 	 */
@@ -69,9 +72,13 @@ class Sheets extends Component {
 
 		return (
 			<section className="sheets"><div className="wrap">
+
 				<Masonry className={ 'chicken' }
 						 options={ masonryOptions }
 						 disableImagesLoaded={ true } >
+
+					<div className="tag-sizer"></div>
+					<div className="tag-gutter"></div>
 
 					{ Object.keys( this.props.tags ).map( ( title, index ) => (
 						<Tag key={ index }

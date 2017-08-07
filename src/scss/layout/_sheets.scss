@@ -5,6 +5,14 @@
 .sheets {
 	padding: 80px 0 50px;
 
+	figure, .tag-sizer {
+		width: 100%;
+	}
+
+	.tag-gutter {
+		width: 0;
+	}
+
 	figure {
 		margin-bottom: 30px;
 		font-size: 16px;
@@ -77,32 +85,12 @@
 			font-size: 0;
 		}
 
-		figure {
-			display: inline-block;
-			vertical-align: text-top;
+		figure, .tag-sizer {
 			width: 48%;
-			margin-right: 4%;
-
-			&:nth-child( even ) {
-				margin-right: 0;
-			}
 		}
-	} // bp: medium
 
-
-	// @include breakpoint( large ) {
-		
-	// 	figure {
-	// 		width: 32%;
-	// 		margin-right: 2%;
-
-	// 		&:nth-child( even ) {
-	// 			margin-right: 2%;
-	// 		}
-
-	// 		&:nth-child( 3n ) {
-	// 			margin-right: 0;
-	// 		}
-	// 	}
-	// }
+		.tag-gutter {
+			width: 4%;
+		}
+	}
 }
