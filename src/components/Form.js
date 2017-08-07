@@ -20,8 +20,7 @@ const Form = ( props ) => (
 
 		<h1>MusicDistro</h1>
 
-		<form onSubmit={ this.handleSubmit }>
-
+		<form>
 			<select name="instrument"
 					id="instrument"
 					defaultValue=""
@@ -33,8 +32,8 @@ const Form = ( props ) => (
 					<option key={ index } value={ instrument }>{ instrument }</option>
 				) }				
 			</select>
-
 		</form>
+
 	</div></section>
 );
 
