@@ -543,7 +543,7 @@ main {
   position: relative;
   margin: 0 auto;
   width: 90%;
-  max-width: 800px; }
+  max-width: 740px; }
 
 figure {
   margin: 0;
@@ -570,7 +570,38 @@ figure {
   .sheets ul {
     padding: 10px; }
     .sheets ul li {
-      padding: 14px 10px; }
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: center;
+      padding: 14px 10px;
+      border-top: 2px solid #f7f7f7; }
+      .sheets ul li:first-child {
+        border-top: none; }
+      .sheets ul li span {
+        display: inline-block;
+        margin-right: auto; }
+    .sheets ul a {
+      flex: 0 1 auto;
+      display: inline-block;
+      margin-left: 8px;
+      padding: 7px 12px;
+      background: #f7f7f7;
+      border-radius: 5px;
+      font-size: 14px;
+      font-weight: 700;
+      color: #404963;
+      transition: all ease-in-out 200ms; }
+      .sheets ul a:hover {
+        background: #ffe000;
+        color: #ffffff; }
+      .sheets ul a:only-of-type {
+        font-size: 0;
+        padding: 6px 10px 6px 12px; }
+        .sheets ul a:only-of-type:after {
+          content: '\f0ed';
+          font-family: "FontAwesome";
+          font-size: 16px;
+          font-weight: 400; }
   @media (min-width: 640px) {
     .sheets .wrap {
       font-size: 0; }

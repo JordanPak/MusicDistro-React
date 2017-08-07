@@ -15,7 +15,7 @@ import PropTypes from 'prop-types';
  */
 const Arrangement = ( props ) =>(
 	<li>
-		{ props.title }
+		<span>{ props.title }</span>
 		{ props.sheets.map( ( link, index ) =>
 			<a key={ index } href={ link }>{ index + 1 }</a>
 		) }		
