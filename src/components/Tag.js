@@ -6,7 +6,7 @@
  */
 
 // libs
-import React, { Component } from 'react';
+import React     from 'react';
 import PropTypes from 'prop-types';
 
 // components
@@ -14,41 +14,32 @@ import Arrangement from './Arrangement';
 
 
 /**
- * Tag class
+ * Build tag
  */
-class Tag extends Component {
+const Tag = ( props ) => {
 
-	// show this thing
-	render() {
-
-		// quit if no arrangements
-		if ( Object.keys( this.props.arrangements ).length === 0 ) {
-			return null;
-		}
-
-		return (
-			<figure>
-				<figcaption>{ this.props.title }</figcaption>
-
-				<ul>{ Object.keys( this.props.arrangements ).map( ( title, index ) => (
-					<Arrangement key={ index }
-					             sheets={ this.props.arrangements[ title ] }
-					             title={ title } />
-				)) }</ul>
-			</figure>
-		);
+	// quit if no arrangements
+	if ( Object.keys( props.arrangements ).length === 0 ) {
+		return null;
 	}
-}
+
+	return (
+		<figure>
+			<figcaption>{ props.title }</figcaption>
+
+			<ul>{ Object.keys( props.arrangements ).map( ( title, index ) => (
+				<Arrangement key={ index }
+								sheets={ props.arrangements[ title ] }
+								title={ title } />
+			)) }</ul>
+		</figure>
+	);
+};
 
 
-/**
- * Define props
- */
 Tag.propTypes = {
 	title			: PropTypes.string.isRequired,
 	arrangements	: PropTypes.object
 };
 
-
-// get going
 export default Tag;

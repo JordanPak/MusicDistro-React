@@ -37,6 +37,7 @@ const Form = ( props ) => (
 	</div></section>
 );
 
+
 Form.propTypes = {
 	instruments			: PropTypes.array.isRequired,
 	onInstrumentChange	: PropTypes.func.isRequired

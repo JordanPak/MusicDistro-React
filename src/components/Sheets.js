@@ -38,15 +38,14 @@ class Sheets extends Component {
 		
 		var arrangements = {};
 
-		// grab the arrangements with selected instrument
-		// for each of the tag's arrangements
+		// loop through the tag's arrangements
 		this.props.tags[ title ].forEach( ( arrangement ) => {
 
-			// get the arrangement's sheets for the
-			// selected instrument
+			// try to get the arrangement's sheets
+			// for the selected instrument
 			var sheetsForInstrument = this.props.arrangements[ arrangement ][ this.props.instrument ];
 
-			// if there's sheets, grab them
+			// if found, set them
 			if ( sheetsForInstrument ) {
 				arrangements[ arrangement ] = sheetsForInstrument;
 			}
@@ -96,14 +95,9 @@ class Sheets extends Component {
 }
 
 
-/**
- * Define props
- */
 Sheets.propTypes = {
 	instrument		: PropTypes.string,
 	arrangements	: PropTypes.object
 };
 
-
-// get going
 export default Sheets;
