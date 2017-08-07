@@ -5,12 +5,13 @@
 .form {
 	padding: 25px 0 0 0;
 	background: $blue;
+	background: linear-gradient( to top, $blue-dark, $blue );
 	
 	// title thing
 	h1 {
 		position: absolute;
 		top: -3px;
-		color: $blue-dark;
+		color: $blue-darker;
 		font-size: 44px;
 		line-height: 1;
 		font-weight: 900;
