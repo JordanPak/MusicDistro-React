@@ -46,8 +46,10 @@ class Sheets extends Component {
 		
 		var arrangements = {};
 
+		// grab the arrangements with selected instrument
+		// for each of the tag's arrangements
 		this.props.tags[ title ].forEach( ( arrangement ) => {
-			arrangements[ arrangement ] = this.props.arrangements[ arrangement ];
+			arrangements[ arrangement ] = this.props.arrangements[ arrangement ][ this.props.instrument ];
 		}, this );
 
 		return arrangements;
@@ -62,7 +64,7 @@ class Sheets extends Component {
 			<section className="sheets"><div className="wrap">
 				{ this.warningMessage() }
 
-				{ this.props.tags ? Object.keys( this.props.tags ).map( ( title, index ) => (
+				{ this.props.instrument ? Object.keys( this.props.tags ).map( ( title, index ) => (
 					<Tag key={ index }
 					     title={ title }
 						 instrument={ this.props.instrument }
