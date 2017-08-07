@@ -6,28 +6,21 @@
  */
 
 // libs
-import React, { Component } from 'react';
+import React     from 'react';
 import PropTypes from 'prop-types';
 
 
-
 /**
- * Arrangement class
+ * Build Arrangement
  */
-class Arrangement extends Component {
-
-	// show this thing
-	render() {
-		return(
-			<li>
-				{ this.props.title }
-				{ this.props.sheets.map( ( link, index ) =>
-					<a key={ index } href={ link }>DL</a>
-				) }		
-			</li>
-		);
-	}
-}
+const Arrangement = ( props ) =>(
+	<li>
+		{ props.title }
+		{ props.sheets.map( ( link, index ) =>
+			<a key={ index } href={ link }>DL</a>
+		) }		
+	</li>
+);
 
 
 /**

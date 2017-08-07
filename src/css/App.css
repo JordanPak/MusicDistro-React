@@ -502,6 +502,13 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: -0.66px;
   color: #404963; }
 
+a {
+  color: #2f5cda;
+  text-decoration: none; }
+  a:hover, a:focus {
+    outline: none;
+    text-decoration: none; }
+
 ul {
   margin: 0;
   padding: 0; }
