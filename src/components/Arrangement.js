@@ -23,14 +23,9 @@ const Arrangement = ( props ) =>(
 );
 
 
-/**
- * Define props
- */
 Arrangement.propTypes = {
 	title	: PropTypes.string.isRequired,
 	sheets	: PropTypes.array
 };
 
-
-// get going
 export default Arrangement;
