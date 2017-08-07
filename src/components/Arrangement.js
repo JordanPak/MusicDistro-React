@@ -17,7 +17,7 @@ const Arrangement = ( props ) =>(
 	<li>
 		{ props.title }
 		{ props.sheets.map( ( link, index ) =>
-			<a key={ index } href={ link }>DL</a>
+			<a key={ index } href={ link }>{ index + 1 }</a>
 		) }		
 	</li>
 );
