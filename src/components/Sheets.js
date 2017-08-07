@@ -8,9 +8,16 @@
 // libs
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import Masonry   from 'react-masonry-component';
 
 // components
 import Tag from './Tag';
+
+
+// masonry options
+var masonryOptions = {
+	transitionDuration : 0
+};
 
 
 /**
@@ -46,7 +53,7 @@ class Sheets extends Component {
 		return arrangements;
 	}
 
-
+	
 	/**
 	 * Show the tags or warning
 	 */
@@ -62,11 +69,17 @@ class Sheets extends Component {
 
 		return (
 			<section className="sheets"><div className="wrap">
-				{ this.props.instrument ? Object.keys( this.props.tags ).map( ( title, index ) => (
-					<Tag key={ index }
-					     title={ title }
-						 arrangements={ this.getTagArrangements( title ) } />
-				)) : null }
+				<Masonry className={ 'chicken' }
+						 options={ masonryOptions }
+						 disableImagesLoaded={ true } >
+
+					{ Object.keys( this.props.tags ).map( ( title, index ) => (
+						<Tag key={ index }
+							title={ title }
+							arrangements={ this.getTagArrangements( title ) } />
+					)) }
+			
+				</Masonry>
 			</div></section>
 		);
 	}

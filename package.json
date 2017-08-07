@@ -6,10 +6,12 @@
   "dependencies": {
     "font-awesome": "^4.7.0",
     "gh-pages": "^1.0.0",
+    "masonry-layout": "^4.2.0",
     "node-sass-chokidar": "0.0.3",
     "npm-run-all": "^4.0.2",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
+    "react-masonry-component": "^5.0.7",
     "react-scripts": "1.0.10",
     "typeface-open-sans": "0.0.31",
     "typeface-oswald": "0.0.31"
