@@ -70,16 +70,19 @@ class Sheets extends Component {
 			return null;
 		}
 
+		// slaughter
 		return (
 			<section className="sheets"><div className="wrap">
 
+				{/* Masonry Layout */}
 				<Masonry className={ 'chicken' }
 						 options={ masonryOptions }
-						 disableImagesLoaded={ true } >
+						 disableImagesLoaded={ true }>
 
 					<div className="tag-sizer"></div>
 					<div className="tag-gutter"></div>
 
+					{/* Tags */}
 					{ Object.keys( this.props.tags ).map( ( title, index ) => (
 						<Tag key={ index }
 							title={ title }
