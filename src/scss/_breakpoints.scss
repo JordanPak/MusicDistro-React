@@ -1,0 +1,96 @@
+/**
+ * Music Distro | Breakpoints
+ */
+
+$breakpoints: (
+	'zero'			: 0px,
+	'small'			: 460px,
+	'medium'		: 640px,
+	'large'			: 1024px,
+	'xlarge'		: 1200px,
+	'xxlarge'		: 1440px,
+);
+
+
+@mixin breakpoint( $breakpoint ) {
+
+	$value: map-get($breakpoints, $breakpoint);
+
+	@if $value != null {
+		@media (min-width: $value) {
+			@content;
+		}
+	}
+
+	@else if $breakpoint != null {
+		@media (min-width: $breakpoint) {
+			@content;
+		}
+	}
+
+	@else {
+		@warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+			+ "Please make sure it is defined in `$breakpoints` map.";
+	}
+}
+
+
+
+@mixin breakpoint-test( $container: false, $bg-color: white, $bg-opacity: 0.2 ) {
+
+	@if variable-exists( breakpoints ) {
+
+		@if $container == false {
+
+			display: block;
+			position: fixed;
+			bottom: 0;
+			left: 0;
+			z-index: 9999;
+			min-width: 200px;
+			padding: 10px 15px;
+			text-align: center;
+			border-radius: 0 10px 0 0;
+
+			background: rgba( $black, 0.9 ) !important;
+			color: $white;
+			font-family: sans-serif;
+			font-size: 14px;
+
+			.name::after {
+				display: inline-block;
+				font-weight: bold;
+
+				@each $breakpoint, $size in $breakpoints {
+					@include breakpoint( $breakpoint ) {
+						content: '' + $breakpoint;
+					}
+				} // @each
+			} // .name::after
+
+			.size::after {
+				display: inline-block;
+				margin-left: 10px;
+
+				@each $breakpoint, $size in $breakpoints {
+					@include breakpoint( $breakpoint ) {
+						content: '(' + $size + ')';
+					}
+				} // @each
+			} // .size::after
+
+		} // if !$container
+
+
+		// $container
+		@else {
+			background: rgba( $bg-color, $bg-opacity );
+		}
+
+	} // if $breakpoints map found.
+
+	// Breakpoints Not Found
+	@else {
+		@warn '$breakpoints map not found.';
+	}
+} // breakpoint-test()

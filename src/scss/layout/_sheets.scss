@@ -1,0 +1,112 @@
+/**
+ * Music Distro | SHEETS
+ */
+
+.sheets {
+	padding: 65px 0 0;
+	opacity: 1;
+	transition: opacity ease-in-out 500ms;
+
+	// &.updating {
+	// 	opacity: 0;
+	// }
+
+	figure, .tag-sizer {
+		width: 100%;
+	}
+
+	.tag-gutter {
+		width: 0;
+	}
+
+	figure {
+		margin-bottom: 30px;
+		font-size: 16px;
+	}
+
+	figcaption {
+		padding: 18px 24px;
+		background: $blue; //$gold-mid;
+		color: $white;
+		font-weight: 700;
+		font-size: 18px;
+	}
+
+
+	ul {
+		padding: 10px 14px;
+
+		li {
+			display: flex;
+			flex-flow: row nowrap;
+			align-items: center;
+			padding: 14px 10px;
+			border-top: 2px solid $gray-lightest;
+
+			&:first-child {
+				border-top: none;
+			}
+
+			span {
+				display: inline-block;
+				margin-right: auto;
+			}
+		}
+		
+		a {
+			flex: 0 1 auto;
+			display: inline-block;
+			margin-left: 8px;
+			padding: 7px 12px;
+			background: $gray-lightest;
+			border-radius: 5px;
+			font-size: 14px;
+			font-weight: 700;
+			color: $gray-dark;
+			transition: all ease-in-out 200ms;
+
+			&:hover {
+				background: $gold;
+				color: $white;
+			}
+
+			&:only-of-type {
+				font-size: 0;
+				padding: 6px 10px 6px 12px;
+
+				&:after {
+					content: '\f0ed';
+					font-family: $font-icon;
+					font-size: 16px;
+					font-weight: 400;
+				}
+			}
+		} // a
+	} // ul
+
+
+	@include breakpoint( small ) {
+		padding-top: 80px;
+	}
+
+
+	@include breakpoint( medium ) {
+
+		.wrap {
+			font-size: 0;
+		}
+
+		figure, .tag-sizer {
+			width: 48%;
+		}
+
+		.tag-gutter {
+			width: 4%;
+		}
+	}
+
+
+	@include breakpoint( large ) {
+		padding-top: 100px;	
+	}
+}

@@ -1,0 +1,27 @@
+{
+  "name": "musicdistro",
+  "version": "0.1.0",
+  "private": true,
+  "homepage": "https://jordanpak.github.io/MusicDistro-React/",
+  "dependencies": {
+    "font-awesome": "^4.7.0",
+    "gh-pages": "^1.0.0",
+    "node-sass-chokidar": "0.0.3",
+    "npm-run-all": "^4.0.2",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "react-masonry-component": "^5.0.7",
+    "react-scripts": "1.0.10",
+    "typeface-open-sans": "0.0.31"
+  },
+  "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "build-css": "node-sass-chokidar src/scss -o src/css",
+    "watch-css": "npm run build-css && node-sass-chokidar src/scss -o src/css --watch --recursive",
+    "start-js": "react-scripts start",
+    "start": "npm-run-all -p watch-css start-js",
+    "build": "npm run build-css && react-scripts build",
+    "eject": "react-scripts eject"
+  }
+}

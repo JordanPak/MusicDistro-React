@@ -1,0 +1,22 @@
+{
+    "Children of Sanchez" : {
+        "tags"      : [ "Halftime Show 1" ],
+        "Piccolo"   : [ "https://yo.lo/p1", "https://yo.lo/p2" ],
+        "Clarinet"  : [ "https://yo.lo/cl1", "https://yo.lo/cl2" ],
+        "Alto Sax"  : [ "https://yo.lo/cl1" ],
+        "Tenor Sax" : [ "https://yo.lo/cl1" ]
+    },
+    "Star Wars" : {
+        "tags"      : [ "Halftime Show 2" ],
+        "Piccolo"   : [ "https://yo.lo/p1", "https://yo.lo/p2" ],
+        "Clarinet"  : [ "https://yo.lo/cl1", "https://yo.lo/cl2" ],
+        "Alto Sax"  : [ "https://yo.lo/cl1" ],
+        "Tenor Sax" : [ "https://yo.lo/cl1" ]
+    },
+    "Big Noise of Winnetka" : {
+        "tags"      : [ "Halftime Show 2", "Stands Tunes" ],
+        "Piccolo"   : [ "https://yo.lo/p1", "https://yo.lo/p2" ],
+        "Clarinet"  : [ "https://yo.lo/cl1", "https://yo.lo/cl2" ],
+        "Alto Sax"  : [ "https://yo.lo/alto-sax-1", "https://yo.lo/alto-sax-2" ]
+    }
+}

@@ -1,0 +1,29 @@
+/**
+ * Music Distro | BUTTON
+ */
+
+@mixin button() {
+	display: inline-block;
+	padding: 10px 22px;
+	background: $green;
+	color: $white;
+	border: none;
+	outline: none;
+	text-transform: uppercase;
+	font-weight: 700;
+	font-size: 16px;
+	letter-spacing: 1.5px;
+	border-radius: 6px;
+	box-shadow: 0 2px 24px rgba( $blue, 0.5 );
+	border-bottom: 1px solid $green-light;
+	transition: all ease-in-out 200ms;
+	cursor: pointer;
+
+	&:hover {
+		background: $green-light;
+	}
+}
+
+button, [role="button"], [type="submit"] {
+	@include button();
+}
