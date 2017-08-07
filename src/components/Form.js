@@ -16,7 +16,7 @@ import PropTypes from 'prop-types';
  * @param object  props  instruments and data callback 
  */
 const Form = ( props ) => (
-	<section className="form"><div className="wrap">
+	<header><div className="wrap">
 
 		<h1>MusicDistro</h1>
 
@@ -34,7 +34,7 @@ const Form = ( props ) => (
 			</select>
 		</form>
 
-	</div></section>
+	</div></header>
 );
 
 
