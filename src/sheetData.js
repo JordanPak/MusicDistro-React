@@ -5,7 +5,6 @@
  * @package musicdistro
  */
 
-// get sheet music
 import sheetMusic from './sheet-music.json';
 
 
@@ -14,7 +13,6 @@ import sheetMusic from './sheet-music.json';
  */
 var allTags        = {};
 var allInstruments = [];
-// var allArrangements       = [];
 
 
 /**
@@ -41,9 +39,6 @@ function setTag( tag ) {
  * Arrangement loop
  */
 for ( var [ arrangement, data ] of Object.entries( sheetMusic ) ) {
-
-	// add the arrangement
-	// allArrangements = allArrangements.concat( arrangement );
 
 	// set arrangement tags
 	if ( data.tags ) {
@@ -72,6 +67,4 @@ const sheetData = {
 	"arrangements"	: sheetMusic,
 };
 
-
-// get going
 export default sheetData;
