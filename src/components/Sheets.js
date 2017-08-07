@@ -65,7 +65,6 @@ class Sheets extends Component {
 				{ this.props.instrument ? Object.keys( this.props.tags ).map( ( title, index ) => (
 					<Tag key={ index }
 					     title={ title }
-						 instrument={ this.props.instrument }
 						 arrangements={ this.getTagArrangements( title ) } />
 				)) : null }
 			</div></section>

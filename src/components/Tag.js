@@ -9,6 +9,9 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
+// components
+import Arrangement from './Arrangement';
+
 
 /**
  * Tag class
@@ -28,7 +31,9 @@ class Tag extends Component {
 				<figcaption>{ this.props.title }</figcaption>
 
 				<ul>{ Object.keys( this.props.arrangements ).map( ( title, index ) => (
-					<li key={ index }>{ title }</li>
+					<Arrangement key    = { index }
+					             sheets = { this.props.arrangements[ title ] }
+					             title  = { title } />
 				)) }</ul>
 			</figure>
 		);
