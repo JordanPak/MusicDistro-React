@@ -15,15 +15,27 @@ import PropTypes from 'prop-types';
  */
 class Sheets extends Component {
 
+	// warning?
+	warningMessage = () => {
+
+		// no instrument?
+		if ( ! this.props.instrument ) {
+			return <h2>Select an instrument yo</h2>
+		}
+		
+		// no tags?
+		else if ( Object.keys( this.props.tags ).length === 0 ) {
+			console.log( 'ELLO POPPET' );
+			return <h2>There aren't any tagged arrangements :(</h2>
+		}
+	}
+
+
+	// show this thing
 	render() {
-
-		console.log( this.props );
-
-		var message = this.props.instrument ? <h1>Getting { this.props.instrument } sheets</h1> : "";
-
 		return (
 			<section className="sheets"><div className="wrap">
-				{ message }
+				{ this.warningMessage() }
 			</div></section>
 		);
 	}

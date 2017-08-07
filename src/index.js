@@ -50,9 +50,6 @@ class App extends Component {
 
 	// output component
 	render() {
-		
-		console.log( 'RENDERING!' );
-
 		return (
 			<main className="App">
 				<Form instruments={ sheetData.instruments }

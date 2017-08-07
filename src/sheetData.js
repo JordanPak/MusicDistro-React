@@ -46,7 +46,9 @@ for ( var [ arrangement, data ] of Object.entries( sheetMusic ) ) {
 	// allArrangements = allArrangements.concat( arrangement );
 
 	// set arrangement tags
-	data.tags.forEach( setTag );
+	if ( data.tags ) {
+		data.tags.forEach( setTag );
+	}
 
 	// remove tag from the object so we just
 	// have instruments
