@@ -466,9 +466,12 @@ form {
 label, input, select, textarea {
   display: inline-block;
   width: 100%;
-  font-family: "Open Sans", sans-serif; }
+  font-family: "Open Sans", sans-serif;
+  box-shadow: 0 0 0 transparent;
+  transition: box-shadow ease-in-out 400ms; }
   label:focus, input:focus, select:focus, textarea:focus {
-    outline: none; }
+    outline: none;
+    box-shadow: 0 0 20px #f9bc00; }
 
 label {
   margin-bottom: 10px;
